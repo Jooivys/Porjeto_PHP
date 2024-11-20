@@ -1,14 +1,14 @@
 <?php
-include_once("templates/topo.php"); // incluio o topo do site
+
+include_once("templates/topo.php"); 
 
 if (empty($_SERVER["QUERY_STRING"])) {
-    $var = "inicio.php"; // se o usuario não escolheu nada, vai ir para esse arquivo
+    $var = "inicio.php"; 
     include_once($var);
 } else {
     $pg = $_GET['pg'];
     include_once("$pg.php");
 }
-
 include_once("templates/rodape.php");
 
 
