@@ -1,4 +1,5 @@
 <?php
+
 include_once("templates/topo.php"); 
 
 if (empty($_SERVER["QUERY_STRING"])) {
@@ -8,7 +9,6 @@ if (empty($_SERVER["QUERY_STRING"])) {
     $pg = $_GET['pg'];
     include_once("$pg.php");
 }
-
 include_once("templates/rodape.php");
 
 

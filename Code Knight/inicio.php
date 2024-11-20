@@ -1,3 +1,4 @@
+
 <H1> TELA DE CADASTRO/LOGIN </H1>
 
 <form action="?pg=recebe_cadastro" method="post">
@@ -11,5 +12,6 @@
     </select><br>
     <input type="submit" value="Registrar">
 </form>
+
 
 

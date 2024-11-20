@@ -1,2 +1,2 @@
-# Projeto_PHP
-Projeto de um "jogo" a ser entregue semanalmente
+# Introdução
+Projeto de um jogo simples com combate 
