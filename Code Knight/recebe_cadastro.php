@@ -13,9 +13,9 @@ $sql = "INSERT INTO players
 $query = mysqli_query($conexao, $sql);
 
 if ($query) {
-    echo "<h3> Mensagem enviada com sucesso</h3>";
+    echo "<h3> Cadastro realizado com sucesso </h3>";
 } else {
-    echo "<h3>Erro ao enviar mensagem</h3>";
+    echo "<h3> Erro ao se cadastrar </h3>";
 }
 
 mysqli_close($conexao);
