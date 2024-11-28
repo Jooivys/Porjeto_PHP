@@ -1,9 +1,6 @@
 <?php
 session_start();
-include('db.php');
-include('verifica_admin.php'); // Função de verificação
-
-verificaAdmin(); // Verifica se o usuário é admin
+include('../db.php');
 
 // Lógica para listar os usuários
 $sql = "SELECT * FROM usuarios";
@@ -20,7 +17,7 @@ $result = mysqli_query($conexao, $sql);
 <body>
     <div class="container">
         <h1>Painel de Administração</h1>
-        <a href="logout.php">Sair</a>
+        <a href="../logout.php">Sair</a>
         <table>
             <tr>
                 <th>ID</th>

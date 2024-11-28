@@ -1,9 +1,6 @@
 <?php
 session_start();
-include('db.php');
-include('verifica_admin.php');
-
-verificaAdmin();
+include('../db.php');
 
 $id = $_GET['id'];
 
