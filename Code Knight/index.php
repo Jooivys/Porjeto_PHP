@@ -2,6 +2,18 @@
 session_start();
 include('db.php');
 
+// Verificar se é Admin ou usuário comum
+$_SESSION['is_admin'] = $user['is_admin']; 
+
+function verificaAdmin() {
+    if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
+        header('Location: index.php');
+        exit;
+    }
+}
+
+
+
 // Lidar com o login
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $nome = $_POST['nome'];
