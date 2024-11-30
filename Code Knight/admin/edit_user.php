@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "UPDATE usuarios SET classe = '$classe', ouro = $ouro WHERE id = $id";
     if (mysqli_query($conexao, $sql)) {
-        header('Location: admin.php');
+        header('Location: index.php');
     } else {
         echo "Erro ao atualizar: " . mysqli_error($conexao);
     }
