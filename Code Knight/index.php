@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
     if (mysqli_num_rows($result) > 0) {
         echo "Nome de usuário já existe!";
     } else {
-        // Cadastra o novo usuário sem o campo de ouro
+        // Cadastra o novo usuário no banco de dados
         $sql = "INSERT INTO usuarios (nome, senha, classe) VALUES ('$nome', '$senha', '$classe')";
         if (mysqli_query($conexao, $sql)) {
             echo "Cadastro realizado com sucesso! Agora você pode fazer login.";

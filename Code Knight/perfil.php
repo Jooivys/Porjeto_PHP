@@ -28,6 +28,7 @@ $ouro = $_SESSION['ouro'];  // Pega o ouro da sessão
         <p>Classe: <?php echo $class; ?></p>
         <p>Ouro: <?php echo $ouro; ?></p>
         <a href="batalha.php">Lutar contra inimigo</a>
+        <a href="logout.php">DESISTO!</a>
     </div>
 </body>
 </html>
