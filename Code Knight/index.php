@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
         $_SESSION['classe'] = $user['classe'];
         $_SESSION['user_id'] = $user['id'];  // Aqui é onde definimos o ID do usuário
         $_SESSION['ouro'] = 0;  // Inicia o ouro na sessão como 0
-        header('Location: perfil.php');
+        header('Location: perfil.php'); // Se tudo estiver certo, vai para a pagina de perfil
     } else {
         echo "Login ou senha incorretos!";
     }
@@ -50,13 +50,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Login e Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Login</h2>
@@ -79,4 +82,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
         </form>
     </div>
 </body>
+
 </html>
