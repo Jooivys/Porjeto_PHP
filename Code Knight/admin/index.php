@@ -62,7 +62,7 @@ if (!$user || $user['is_admin'] != 1) {
         </div>
     </body>
     </html>";
-    exit;
+exit;
 }
 
 // Lógica para listar os usuários
