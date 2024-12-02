@@ -9,11 +9,20 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Lógica da batalha (rolagem de dados entre o jogador e o inimigo)
-$user_roll = rand(1, 6);  // O usuário rola um dado de 6 faces
-$enemy_roll = rand(1, 6);  // O inimigo rola um dado de 6 faces
+$user_roll = mt_rand(1, 6);  // Gera números mais aleatórios para o jogador
+$enemy_roll = mt_rand(1, 6);  // Gera números mais aleatórios para o inimigo
 
-// Definir a classe do inimigo (pode ser aleatória ou fixa, por enquanto está como "Inimigo Genérico")
-$inimigo = "Inimigo Genérico";
+// Definir qual tipo de inimigo vai aparecer e a imagem correspondente aleatoriamente
+$inimigos = [
+    //['nome' => 'Goblin', 'imagem' => 'images/goblin.png'],
+    //['nome' => 'Orc', 'imagem' => 'images/orc.png'],
+    ['nome' => 'Programador PHP SÊNIOR FULL SATCK', 'imagem' => 'images/phpSenior.png'],
+    ['nome' => 'Desenvolvedor PHP JÚNIOR', 'imagem' => 'images/phpJunior.png'],
+];
+$inimigo_selecionado = $inimigos[array_rand($inimigos)];
+$inimigo = $inimigo_selecionado['nome'];
+$inimigo_image = $inimigo_selecionado['imagem'];
+
 
 // Verifica o vencedor
 if ($user_roll > $enemy_roll) {
@@ -33,19 +42,19 @@ $_SESSION['ouro'] += $ouro_ganho;
 // Pega as imagens das classes (assumindo que as imagens estão na pasta "images/")
 $user_class = $_SESSION['classe'];  // Classe do usuário
 $user_image = "images/{$user_class}.png";  // Caminho para a imagem da classe do usuário
-$inimigo_image = "images/inimigo.png";  // Caminho para a imagem do inimigo
 
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalha</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="<?php echo $resultado; ?>">
     <div class="container">
         <h1>Batalha Finalizada</h1>
 
@@ -66,7 +75,7 @@ $inimigo_image = "images/inimigo.png";  // Caminho para a imagem do inimigo
         <!-- Imagem do Inimigo -->
         <div class="imagem-inimigo">
             <h3>Inimigo: <?php echo $inimigo; ?></h3>
-            <img src="<?php echo $inimigo_image; ?>" alt="Inimigo" class="imagem-personagem">
+            <img src="<?php echo $inimigo_image; ?>" alt="<?php echo $inimigo; ?>" class="imagem-personagem">
         </div>
 
         <!-- Link para o perfil -->

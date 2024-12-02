@@ -2,18 +2,6 @@
 session_start();
 include('db.php');
 
-// Verificar se é Admin ou usuário comum
-$_SESSION['is_admin'] = $user['is_admin']; 
-
-function verificaAdmin() {
-    if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
-        header('Location: index.php');
-        exit;
-    }
-}
-
-
-
 // Lidar com o login
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     $nome = $_POST['nome'];
@@ -30,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
         $_SESSION['classe'] = $user['classe'];
         $_SESSION['user_id'] = $user['id'];  // Aqui é onde definimos o ID do usuário
         $_SESSION['ouro'] = 0;  // Inicia o ouro na sessão como 0
-        header('Location: perfil.php');
+        header('Location: perfil.php'); // Se tudo estiver certo, vai para a pagina de perfil
     } else {
         echo "Login ou senha incorretos!";
     }
@@ -49,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
     if (mysqli_num_rows($result) > 0) {
         echo "Nome de usuário já existe!";
     } else {
-        // Cadastra o novo usuário sem o campo de ouro
+        // Cadastra o novo usuário no banco de dados
         $sql = "INSERT INTO usuarios (nome, senha, classe) VALUES ('$nome', '$senha', '$classe')";
         if (mysqli_query($conexao, $sql)) {
             echo "Cadastro realizado com sucesso! Agora você pode fazer login.";
@@ -62,14 +50,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Login e Cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="login">
     <div class="container">
         <h2>Login</h2>
         <form method="POST">
@@ -91,4 +82,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
         </form>
     </div>
 </body>
+
 </html>
