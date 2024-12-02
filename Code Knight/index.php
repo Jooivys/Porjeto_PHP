@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login">
     <div class="container">
         <h2>Login</h2>
         <form method="POST">
