@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:style.css
 /* Estilo geral da página */
 body {
     font-family: Arial, sans-serif;
@@ -33,4 +34,74 @@ h1 {
 
 h3 {
     color: red;
+=======
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Resultado da batalha */
+body.ganhou {
+    background-color: #26c92b;
+    /* Verde */
+}
+
+body.perdeu {
+    background-color: #f44336;
+    /* Vermelho */
+}
+
+body.empatou {
+    background-color: #222;
+    /* Preto */
+}
+
+.login {
+    min-height: 100%;
+    background:
+        linear-gradient(rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%) 0 0/100% 200%;
+    animation: a 2s linear infinite;
+}
+
+@keyframes a {
+    to {
+        background-position: 0 -200%
+    }
+} 
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    color: red;
+}
+
+h1,
+p {
+    color: white;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+.imagem-classe,
+.imagem-inimigo {
+    margin: 20px 0;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    border: 2px solid red;
+    border-radius: 10px;
+>>>>>>> Stashed changes:Code Knight/style.css
 }
