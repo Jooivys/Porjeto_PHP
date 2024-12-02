@@ -1,0 +1,113 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+/* Container principal */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #4caf50; /* Verde brilhante */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Formulário */
+form {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #eaeaea;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #4caf50;
+}
+
+/* Botões */
+button {
+    background-color: #4caf50;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Botão de voltar */
+.back-link {
+    display: inline-block;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ff5722;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background-color: #ff5722;
+    color: #121212;
+}
+
+/* Mensagem de erro ou sucesso */
+.alert {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.alert-error {
+    background-color: #f44336;
+    color: white;
+}

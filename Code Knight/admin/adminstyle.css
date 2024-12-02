@@ -1,0 +1,106 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+/* Container principal */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #4caf50; /* Verde brilhante */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+/* Botão de sair */
+a {
+    color: #ff5722; /* Laranja brilhante */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff5722;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #ff5722;
+    color: #121212;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #2a2a2a;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+th {
+    background-color: #333;
+    color: #4caf50;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+td {
+    color: #eaeaea;
+}
+
+/* Ações na tabela */
+td a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+td a:hover {
+    background-color: #ff5722;
+    color: #121212;
+}
+
+/* Alternar linhas */
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:nth-child(odd) {
+    background-color: #1e1e1e;
+}
+
+/* Mensagem de erro (exemplo para uso futuro) */
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
