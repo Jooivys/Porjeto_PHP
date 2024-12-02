@@ -76,7 +76,7 @@ $result = mysqli_query($conexao, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Painel Admin</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adminstyle.css">
 </head>
 <body>
     <div class="container">
