@@ -33,7 +33,7 @@ $user_image = "images/{$class}.png";
         <p>Classe: <?php echo $class; ?></p>
         <!-- Adiciona a imagem da classe -->
         <div class="imagem-container">
-            <img src="<?php echo $user_image; ?>" alt="<?php echo $class; ?>" class="imagem-personagem">
+            <img class="imagem-personagem" src="<?php echo $user_image; ?>" alt="<?php echo $class; ?>">
         </div>
         <p>Ouro: <?php echo $ouro; ?></p>
 

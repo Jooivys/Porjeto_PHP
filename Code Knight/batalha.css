@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Resultado da batalha */
+body.ganhou {
+    background-color: #26c92b;
+}
+
+body.perdeu {
+    background-color: #f44336;
+}
+
+body.empatou {
+    background-color: #222;
+}
+
+/* Container principal */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    color: red;
+}
+
+h1,
+p {
+    color: white;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+/* Seção de imagens lado a lado */
+.battle-images {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 40px; 
+    margin: 40px 0; 
+}
+
+/* Imagem do Usuário e do Inimigo */
+.user-section img,
+.enemy-section img {
+    width: 150px;
+    height: auto;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+
+.vs-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100px; 
+}
+
+.vs-image {
+    width: 200px; 
+    height: auto;
+}
+
+
